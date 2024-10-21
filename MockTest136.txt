@@ -1,0 +1,90 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+struct PersonalInfo {
+    string name;
+    string address;
+    string email;
+    string phone;
+};
+
+struct Education {
+    string degree;
+    string university;
+    string graduationYear;
+    string gpa;
+};
+
+struct Experience {
+    string jobTitle;
+    string company;
+    string years;
+    string description;
+};
+
+struct Skills {
+    string technicalSkills;
+    string softSkills;
+};
+
+void displayResume(const PersonalInfo& person, const Education& edu, const Experience& exp, const Skills& skills) {
+    cout << "===========================\n";
+    cout << "          RESUME            \n";
+    cout << "===========================\n\n";
+
+    cout << "Name: " << person.name << endl;
+    cout << "Address: " << person.address << endl;
+    cout << "Email: " << person.email << endl;
+    cout << "Phone: " << person.phone << endl;
+    cout << "\n";
+
+    cout << "Education:\n";
+    cout << " Qualifications : " << edu.degree << endl;
+    cout << " University : " << edu.university << endl;
+    cout << " Graduation Year : " << edu.graduationYear << endl;
+    cout << " CGPA : " << edu.gpa << endl;
+    cout << "\n";
+
+    cout << "Experience:\n";
+    cout << "Job Title: " << exp.jobTitle << endl;
+    cout << "Company: " << exp.company << endl;
+    cout << "Years: " << exp.years << endl;
+    cout << "\n";
+
+    cout << "Skills:\n";
+    cout << "Technical Skills: " << skills.technicalSkills << endl;
+    cout << "Soft Skills: " << skills.softSkills << endl;
+    cout << "\n";
+}
+
+int main() {
+    PersonalInfo person = {
+        "Wasekar Mandar Vikasrao",
+        " At. Post Lakhandur , Dist : Bhandara , India",
+        "mandar.wasekar.aids.2023@vpkbiet.org",
+        "9699395125"
+    };
+
+    Education edu = {
+        "B-Tech in Artificial Intelligence",
+        "VPKBIET, Baramati, Pune",
+        "2027",
+        "7.73"
+    };
+
+    Experience exp = {
+        "Student",
+        "Learning",
+        "---",
+    };
+
+    Skills skills = {
+        "C++, Python, HTML",
+        "Teamwork, Communication"
+    };
+
+    displayResume(person, edu, exp, skills);
+
+    return 0;
+}
